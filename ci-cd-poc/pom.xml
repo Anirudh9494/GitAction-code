@@ -79,8 +79,8 @@
 	</pluginRepositories>
    <distributionManagement>
 		<repository>
-			<id>Anirudh9494/GitAction-Code</id>
-			<url>https://github.com/Anirudh9494/GitAction-code</url>
+			<id>GitAction-jarFiles</id>
+			<url>https://github.com/Anirudh9494/GitAction-jarFiles</url>
 		</repository>
 	</distributionManagement>
 
