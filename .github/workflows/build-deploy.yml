@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
-        with:
-          repository: Anirudh9494/GitAction-code
-          ref: refs/heads/master
-          token: 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
+        # with:
+        #   repository: Anirudh9494/GitAction-code
+        #   ref: refs/heads/master
+        #   token: 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
 
       - name: Set up Java JDK
         uses: actions/setup-java@v2
