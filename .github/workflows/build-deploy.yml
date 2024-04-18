@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
          java-version: '1.8'
-         server-password: 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
+         distribution: 'zulu'
          
 
       - name: Build and Package Mule Project
