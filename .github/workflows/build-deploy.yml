@@ -34,4 +34,4 @@ jobs:
          cd GitAction-jarFiles
          git add .
          git commit -m "ci-cd-poc.jar"
-         git push origin main
+         git push origin master
