@@ -13,12 +13,16 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          repository: GitAction-jarFiles
+          ref: refs/heads/master
+          token: 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
 
       - name: Set up Java JDK
         uses: actions/setup-java@v2
         with:
          java-version: '11'
-         token: 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
+         
 
       - name: Build and Package Mule Project
         run: mvn clean package
