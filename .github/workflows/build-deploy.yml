@@ -1,0 +1,32 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+   build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java JDK
+        uses: actions/setup-java@v2
+        with:
+         java-version: '11'
+
+      - name: Build and Package Mule Project
+        run: mvn clean package
+
+      - name: Push JAR File to Another Git Repository
+        run: |
+         git clone https://github.com/Anirudh9494/GitAction-jarFiles.git
+         cp target/ci-cd-poc.jar GitAction-jarFiles/
+         cd GitAction-jarFiles
+         git add .
+         git commit -m "ci-cd-poc.jar"
+         git push origin main
